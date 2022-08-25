@@ -1,0 +1,12 @@
+twig:
+    default_path: '%kernel.project_dir%/templates'
+    globals:
+        slideImg: '/bar_paco/public/assets/imag/slider'
+        tapaImg: '/bar_paco/public/assets/img/tapaImg/'
+
+
+
+when@test:
+    twig:
+        strict_variables: true
+

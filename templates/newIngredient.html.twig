@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 mb-4">
+      <h3>Nueva Ingrediente</h3>
+      {{ form_start(form_ingredient) }}
+      {{ form_errors(form_ingredient) }} 
+      <div class="control-group form-group">
+          {{ form_label(form_ingredient.nombre) }}
+          {{ form_errors(form_ingredient.nombre) }}
+          {{ form_widget(form_ingredient.nombre) }} 
+      </div>
+      <div class="control-group form-group">
+          {{ form_widget(form_ingredient.Guardar) }}
+      </div>
+      {{ form_end(form_ingredient) }}
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block javascripts %}
+<script type="text/javascript" src="{{ asset ('../src/newImgTapa.js') }}">
+</script>
+{% endblock %}

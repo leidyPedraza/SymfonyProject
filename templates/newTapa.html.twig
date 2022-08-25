@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 mb-4">
+      <h3>Nueva Tapa</h3>
+      {{ form_start(form_tapa) }}
+      {{ form_errors(form_tapa) }} 
+      <div class="control-group form-group">
+          {{ form_label(form_tapa.nombre) }}
+          {{ form_errors(form_tapa.nombre) }}
+          {{ form_widget(form_tapa.nombre) }} 
+      </div>
+      <div class="control-group form-group">
+          {{ form_label(form_tapa.descripcion) }}
+          {{ form_errors(form_tapa.descripcion) }}
+          {{ form_widget(form_tapa.descripcion) }} 
+      </div>
+      <div class="control-group form-group">
+          {{ form_label(form_tapa.ingredientes) }}
+          {{ form_errors(form_tapa.ingredientes) }}
+          {{ form_widget(form_tapa.ingredientes) }} 
+      </div>
+      <div class="control-group form-group">
+        <img id="tapaThumb" class="img-fluid" width="150px" src="" alt="">
+      </div>
+      <div class="control-group form-group">
+          {{ form_label(form_tapa.foto) }}
+          {{ form_errors(form_tapa.foto) }}
+          {{ form_widget(form_tapa.foto) }}
+      </div>
+      <div class="control-group form-group">
+          {{ form_label(form_tapa.fechaCreacion) }}
+          {{ form_errors(form_tapa.fechaCreacion) }}
+          {{ form_widget(form_tapa.fechaCreacion) }} 
+      </div>
+      <div class="control-group form-group">
+          {{ form_label(form_tapa.top) }}
+          {{ form_errors(form_tapa.top) }}
+          {{ form_widget(form_tapa.top) }} 
+      </div>
+      <div class="control-group form-group">
+          {{ form_widget(form_tapa.Guardar) }}
+      </div>
+      {{ form_end(form_tapa) }}
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block javascripts %}
+<script type="text/javascript" src="{{ asset ('../src/newImgTapa.js') }}">
+</script>
+{% endblock %}

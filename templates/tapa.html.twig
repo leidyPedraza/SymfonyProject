@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="container">
+  <h1 class="my-4">Todas nuestras tapas</h1>
+  <div class="row">
+    <div class="col-md-8">
+      <img class="img-fluid" src="{{ asset ( tapaImg~Tapa.foto )}}" alt="">
+    </div>
+    <div class="col-md-4">
+      <h3 class="my-3">{{Tapa.nombre}}</h3>
+      <p>{{Tapa.descripcion}}</p>
+      <h3 class="my-3">Ingredientes</h3>
+      {% for ingrediente in Tapa.ingredientes %}
+      {{ingrediente}} <br>
+      
+      {% endfor %}
+     
+  </div>
+  <h3 class="my-4">Otras tapas</h3>
+
+  <div class="row">
+
+    <div class="col-md-3 col-sm-6 mb-4">
+      <a href="#">
+        <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+      </a>
+    </div>
+
+    <div class="col-md-3 col-sm-6 mb-4">
+      <a href="#">
+        <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+      </a>
+    </div>
+
+    <div class="col-md-3 col-sm-6 mb-4">
+      <a href="#">
+        <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+      </a>
+    </div>
+
+    <div class="col-md-3 col-sm-6 mb-4">
+      <a href="#">
+        <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock %}

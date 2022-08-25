@@ -1,0 +1,52 @@
+controllers:
+    resource: ../src/Controller/
+    type: attribute
+
+index:
+    path: /index
+    controller: App\Controller\DefaultController::index
+
+about:
+    path: /about
+    controller: App\Controller\DefaultController::about
+
+bar:
+    path: /bar/{city}
+    controller: App\Controller\DefaultController::bar
+
+tapaAction:
+    path: /tapa/{id}
+    controller: App\Controller\DefaultController::tapaAction
+
+newTapa:
+    path: /gestionTapas/newTapa
+    controller: App\Controller\GestionTapasController::newTapa
+
+categoriaAction:
+    path: /categoria/{id}
+    controller: App\Controller\DefaultController::categoriaAction
+
+newCategory:
+    path: /gestionTapas/newCategory
+    controller: App\Controller\GestionTapasController::newCategory
+
+ingredientAction:
+    path: /ingredient/{id}
+    controller: App\Controller\DefaultController::ingredientAction
+
+newIngredient:
+    path: /gestionTapas/newIngredient
+    controller: App\Controller\GestionTapasController::newIngredient
+
+newUser:
+    path: /newUser
+    controller: App\Controller\DefaultController::newUser
+
+loginAction:
+    path: /login
+    controller: App\Controller\DefaultController::loginAction
+
+app_logout:
+    path: /logout
+    controller: App\Controller\DefaultController::logout
+

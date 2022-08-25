@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="container">
+  <div class="row">
+    <h1 class="mt-4 mb-3">Bar Paco
+        <small>Login de Usuario</small>
+    </h1>
+    {% if error %}
+        <h3>{{ error.messageKey|trans(error.messageData, 'security') }}</h3>
+    {% endif %}
+
+
+<form action="{{ path('loginAction') }}" method="post">
+    <div class="control-group form-group">
+        <div class="controls">
+    <label for="username">Email:</label>
+    <input class="form-control" type="text" id="username" name="_username" value="{{last_username}}"/>
+        </div>
+    </div>
+    <div class="control-group form-group">
+        <div class="controls">
+    <label for="password">Password:</label>
+    <input class="form-control" type="password" id="password" name="_password"/>
+</div>
+</div>
+
+    <button type="submit" class="btn btn-primary">login</button>
+</form>
+{% endblock %}
+{% block javascripts %}
+<script type="text/javascript" src="{{ asset ('../src/newImguser.js') }}">
+</script>
+{% endblock %}

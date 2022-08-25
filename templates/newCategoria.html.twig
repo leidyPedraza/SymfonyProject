@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 mb-4">
+      <h3>Nueva Categoria</h3>
+      {{ form_start(form_categoria) }}
+      {{ form_errors(form_categoria) }} 
+      <div class="control-group form-group">
+          {{ form_label(form_categoria.nombre) }}
+          {{ form_errors(form_categoria.nombre) }}
+          {{ form_widget(form_categoria.nombre) }} 
+      </div>
+      <div class="control-group form-group">
+          {{ form_label(form_categoria.descripcion) }}
+          {{ form_errors(form_categoria.descripcion) }}
+          {{ form_widget(form_categoria.descripcion) }} 
+      </div>
+      <div class="control-group form-group">
+        <img id="tapaThumb" class="img-fluid" width="150px" src="" alt="">
+      </div>
+      <div class="control-group form-group">
+          {{ form_label(form_categoria.foto) }}
+          {{ form_errors(form_categoria.foto) }}
+          {{ form_widget(form_categoria.foto) }}
+      </div>
+      <div class="control-group form-group">
+          {{ form_widget(form_categoria.Guardar) }}
+      </div>
+      {{ form_end(form_categoria) }}
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block javascripts %}
+<script type="text/javascript" src="{{ asset ('../src/newImgTapa.js') }}">
+</script>
+{% endblock %}
